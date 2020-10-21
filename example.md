@@ -1,3 +1,21 @@
+---
+title: ほげ
+date : 2020-01-01
+---
+
+<script>
+function hoge() {
+  return 1;
+}
+</script>
+
+<style>
+body {
+  color: #f00;
+  background: #00f;
+}
+</style>
+
 # Example Markdown
 
 テストです_テスト強調_です__テストさらに強調__です`コード`です。
@@ -29,8 +47,21 @@
 1. 番号リスト
 2. 番号リストです
 
-```sh
+```bash
 $ ls -la
+```
+
+```sh
+# Prism では bash か shell
+# refractor.alias('bash', 'sh'); がどこかでできるとそのままイケる
+$ ls -la
+```
+
+```javascript
+function hoge(text) {
+  const replaced = text.trim().replace(/foo/u, 'bar');
+  return replaced + `${'some'}`;
+}
 ```
 
 > ## 引用
@@ -40,3 +71,5 @@ $ ls -la
 > - 引用リスト
 
 以上です。
+
+スタイル・スクリプト。
