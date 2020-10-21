@@ -4,6 +4,7 @@ const unified         = require('unified');
 const remarkParse     = require('remark-parse');
 const remarkRehype    = require('remark-rehype');
 const rehypeStringify = require('rehype-stringify');
+const rehypeFormat    = require('rehype-format');
 
 // rehype-parse     : HTML To hast
 // rehype-remark    : hast To mdast
@@ -15,7 +16,6 @@ const rehypeStringify = require('rehype-stringify');
 // remark-preset-lint-markdown-style-guide
 // unified-stream : process.stdin.pipe(unifiedStream(processor)).pipe(process.stdout);
 // rehype-document
-// rehype-format
 
 (async () => {
   try {
@@ -30,7 +30,8 @@ async function main() {
   const processor = unified()
     .use(remarkParse)       // Markdown To mdast (Markdown AST)
     .use(remarkRehype)      // mdast To hast (HTML AST)
-    .use(rehypeStringify);  // hast To HTML
+    .use(rehypeStringify)   // hast To HTML
+    .use(rehypeFormat);     // HTML Format
   
   const input = await fs.readFile('./index.md', 'utf-8');
   
@@ -38,3 +39,12 @@ async function main() {
   const contents = result.contents;  // HTML Code
   console.log(contents);
 }
+
+/*
+
+# Ref
+
+- @agentofuser/rehype-section : https://github.com/agentofuser/rehype-section
+  - Wrap `section`
+
+ */
