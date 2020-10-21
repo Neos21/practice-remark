@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 
 const unified          = require('unified');
-const remarkParse      = require('remark-parse');
+const remarkParse      = require('remark-parse');  // v9.0.0 以降はアンダースコアによる強調が行える Pedantic モードが廃止されたため、直前のバージョンである v8.0.3 を使用する。v8.0.3 は remark-gfm 相当が同梱されている
 const remarkRehype     = require('remark-rehype');
 const rehypeSlug       = require('rehype-slug');
 const rehypeToc        = require('@jsdevtools/rehype-toc');
