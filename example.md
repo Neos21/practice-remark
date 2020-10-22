@@ -1,6 +1,10 @@
 ---
 title: ほげ
 date : 2020-01-01
+style: |
+  body.frontmatter {
+    color: #0f0;
+  }
 ---
 
 <script>
@@ -10,11 +14,15 @@ function hoge() {
 </script>
 
 <style>
-body {
+body.test {
   color: #f00;
   background: #00f;
 }
 </style>
+
+ということでね。
+
+# Table of Contents
 
 # Example Markdown
 
@@ -26,10 +34,14 @@ body {
 
 テキストです
 
+## テーブル
+
 | テーブル | 見出し |
 |----------|--------|
 | Hoge     | Fuga   |
 | Foo      | Bar    |
+
+### リスト
 
 - リスト
   - ネスト
@@ -43,6 +55,8 @@ body {
 いかがでしょう
 
 ---
+
+## 番号リスト
 
 1. 番号リスト
 2. 番号リストです
