@@ -120,7 +120,7 @@ async function markdownToHtml(inputMarkdownText) {
         preprosessorResult.data.frontmatter.style
       ],
       css: [
-        '/example.css'
+        './prism-monokai.css'
       ],
       script: [
         '\nfunction thisIsEndOfBody() {\n  alert(0);\n }\n'

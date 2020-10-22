@@ -12,7 +12,7 @@ color: red;
     <style>body.frontmatter {
 color: #0f0;
 }</style>
-    <link rel="stylesheet" href="/example.css">
+    <link rel="stylesheet" href="./prism-monokai.css">
   </head>
   <body>
     <script>
@@ -92,11 +92,9 @@ body.test {
       <li>番号リスト</li>
       <li>番号リストです</li>
     </ol>
-    <pre class="language-bash"><code class="language-bash">$ <span class="token function">ls</span> -la
-</code></pre>
-    <pre class="language-sh"><code class="language-sh"># Prism では bash か shell
-# refractor.alias('bash', 'sh'); がどこかでできるとそのままイケる
-$ ls -la
+    <pre class="language-bash"><code class="language-bash"><span class="token comment"># Prism では bash か shell</span>
+<span class="token comment"># refractor.alias('bash', 'sh'); がどこかでできるとそのままイケる</span>
+$ <span class="token function">ls</span> -la
 </code></pre>
     <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">hoge</span><span class="token punctuation">(</span><span class="token parameter">text</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> replaced <span class="token operator">=</span> text<span class="token punctuation">.</span><span class="token method function property-access">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">foo</span><span class="token regex-delimiter">/</span><span class="token regex-flags">u</span></span><span class="token punctuation">,</span> <span class="token string">'bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>

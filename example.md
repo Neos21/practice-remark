@@ -62,10 +62,6 @@ body.test {
 2. 番号リストです
 
 ```bash
-$ ls -la
-```
-
-```sh
 # Prism では bash か shell
 # refractor.alias('bash', 'sh'); がどこかでできるとそのままイケる
 $ ls -la
